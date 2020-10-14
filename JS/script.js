@@ -13,7 +13,7 @@ setTimeout('window.location="#overlay"', 60000);
 
 function validate_form() {
 	var st_exp = /^[А-Яа-яІі\s]+/;
-	var gr_exp = /^[А-Яа-яІі]{2,2}-[0-9]{2,2}/;
+	var gr_exp = /^[А-Яа-яІі]{2,2}\-[0-9]/;
 	var student = document.getElementById('st_input').value;
 	var group = document.getElementById('gr_input').value;
 	var specialty = document.getElementById('sp_input').value;
