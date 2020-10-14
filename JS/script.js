@@ -11,9 +11,13 @@ setTimeout('window.location="#overlay"', 60000);
 // сценарію, для перевірки коректності заповнення полів слід застосувати
 // механіхм регулярних виразів RegExp.
 
+// діє на form_js.html
+
 function validate_form() {
 	var st_exp = /^[А-Яа-яІі\s]+/;
 	var gr_exp = /^[А-Яа-яІі]{2,2}\-[0-9]/;
+	var sp_exp = /^\d{3,3}$/;
+	var em_exp = /^[a-z0-9._-]+\@[a-z0-9]+\.[a-z]{2,4}$/;
 	var student = document.getElementById('st_input').value;
 	var group = document.getElementById('gr_input').value;
 	var specialty = document.getElementById('sp_input').value;
@@ -30,17 +34,44 @@ function validate_form() {
 		alert('Поле групи повинне містити дві українські літери, дефіс та номер');
 		return false;
 	}
+
+	if (sp_exp.test(specialty) == false)
+	{
+		alert('Номер спеціальності має бути трьохзначним числом');
+		return false;
+	}
+
+	if (em_exp.test(email) == false)
+	{
+		alert('Це не схоже на Email');
+		return false;
+	}
+
 	
 }
 
 // 3) Реалізувати аналогічну перевірку із використанням бібліотеки jQuery
 // validate.
 
+// діє на form_jQuery.html
+
+var st = $('#st_input').val();
+var gr = $('#gr_input').val();
 var sp = $('#sp_input').val();
 var em = $('#em_input').val();
 
-$(".decor").validate({
+$(".decor_j").validate({
 	rules: {
+		student: {
+			required: true,
+			pattern: /^[А-Яа-яІі\s]+/,
+		},
+
+		group: {
+			required: true,
+			pattern: /^[А-Яа-яІі]{2,2}\-[0-9]/,
+		},
+
 		specialty: {
 			digits: true,
 			required: true,
@@ -55,6 +86,16 @@ $(".decor").validate({
 	},
 
 	messages: {
+		student: {
+			required: "Поле ПІБ пусте",
+			pattern: "Ім\'я повинно бути введене українськими літерами"
+		},
+
+		group: {
+			required: "Поле групи пусте",
+			pattern: "Поле групи повинне містити дві українські літери, дефіс та номер"
+		},
+
 		specialty: {
 			required: "Поле спеціальності пусте",
 			minlength: "Номер спеціальності надто короткий",
@@ -70,8 +111,10 @@ $(".decor").validate({
 	errorClass: "input_error",
 
 	errorPlacement: function(error, element) { 
+		if (element.attr("name") == "student") error.insertAfter($("#st_input"));
+		if (element.attr("name") == "group") error.insertAfter($("#gr_input"));
 		if (element.attr("name") == "specialty") error.insertAfter($("#sp_input"));
-		if (element.attr("name") == "email") error.insertAfter($("input[name=email]"));
+		if (element.attr("name") == "email") error.insertAfter($("#em_input"));
 	}
 
 });

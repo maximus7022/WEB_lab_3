@@ -2,21 +2,22 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Форма реєстрації</title>
+		<title>Форма jQuery</title>
 
 		<link rel = "stylesheet" href = "STYLE/form.css">
 		<script type="text/javascript" src="JS/jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="JS/jquery.validate.js"></script>
+		<script type="text/javascript" src="JS/pattern.js"></script>
 		
 		<link rel="shortcut icon" href="IMAGES/IPT_LOGO.png" type="image/png">
 	</head>
 
 	<body>
-		<form onsubmit="return validate_form();" method="post" class="decor">
+		<form method="post" class="decor_j">
 			<div class="form-inner">
     			<h3 align="center">Якщо ти випускник Фізтеху і хочеш бачити себе на сайті - <p>ЗАПОВНЯЙ ФОРМУ</h3>
-		    	<input id="st_input" type="text" placeholder="ПІБ" required>
-		    	<input id="gr_input" type="text" placeholder="Група" required>
+		    	<input id="st_input" type="text" placeholder="ПІБ" required name="student">
+		    	<input id="gr_input" type="text" placeholder="Група" required name="group">
 
 		    	<input id="sp_input" placeholder="Спеціальність(№)" required name="specialty">
 		    	<input id="em_input" type="email" placeholder="Email" required name="email">
