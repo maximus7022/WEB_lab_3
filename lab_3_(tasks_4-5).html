@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>(4-5)</title>
+		<script type="text/javascript" src="JS/jquery-3.5.1.min.js"></script>
+		<style>
+			body {
+				margin: 0;
+			}
+			
+			#input_age {
+				margin-top: 15px;
+				display: block;
+				padding: 0 20px;
+				background: #E9EFF6;
+				line-height: 40px;
+				border-width: 0;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			#button_age {
+				margin-top: 20px;
+				width: 200px;
+				height: 30px;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #E9EFF6;
+				background: #282923;
+				transition: .3s;
+			}
+
+			#button_age:hover{
+				background: #E9EFF6;
+				box-shadow: 0 15px 20px #E9EFF6;
+				color: #282923;
+				transform: translateY(-7px);
+			}
+
+			
+			#input_name {
+				margin-top: 35px;
+				display: block;
+				padding: 0 20px;
+				background: #E9EFF6;
+				line-height: 40px;
+				border-width: 0;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+			}
+			
+			#button_name {
+				margin-top: 20px;
+				width: 200px;
+				height: 30px;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #E9EFF6;
+				background: #282923;
+				transition: .3s;
+			}
+
+			#button_name:hover{
+				background: #E9EFF6;
+				box-shadow: 0 15px 20px #E9EFF6;
+				color: #282923;
+				transform: translateY(-7px);
+			}
+
+			#input_sur {
+				margin-top: 35px;
+				display: block;
+				padding: 0 20px;
+				background: #E9EFF6;
+				line-height: 40px;
+				border-width: 0;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			#button_sur {
+				margin-top: 20px;
+				width: 200px;
+				height: 30px;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #E9EFF6;
+				background: #282923;
+				transition: .3s;
+			}
+
+			#button_sur:hover{
+				background: #E9EFF6;
+				box-shadow: 0 15px 20px #E9EFF6;
+				color: #282923;
+				transform: translateY(-7px);
+			}
+
+			#button_course {
+				text-transform: uppercase;
+				margin-top: 20px;
+				width: 200px;
+				height: 40px;
+				border-radius: 5px;
+				font-family: 'Roboto', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #E9EFF6;
+				background: #282923;
+				transition: .3s;
+			}
+
+			#button_course:hover{
+				background: #E9EFF6;
+				box-shadow: 0 15px 20px #E9EFF6;
+				color: #282923;
+				transform: translateY(-7px);
+			}
+
+			#info {
+				text-transform: uppercase;
+				margin-top: 20px;
+				width: 200px;
+				height: 55px;
+				border-radius: 5px;
+				font-family: 'Roboto', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #E9EFF6;
+				background: #282923;
+				transition: .3s;
+			}
+
+			#info:hover {
+				background: #E9EFF6;
+				box-shadow: 0 15px 20px #E9EFF6;
+				color: #282923;
+				transform: translateY(-7px);
+			}
+
+			#task_4 {
+				background-color: #181915;
+				width: 200px;
+				padding:10px;
+				margin-top: 8px;
+				margin-left: 10px;
+				border-radius: 20px;
+			}
+
+			#task_5 {
+				background-color: #181915;
+				width: 200px;
+				padding:10px;
+				margin-left: 1305px;
+				margin-top: -574px;
+				border-radius: 20px;
+			}
+
+			#input_1 {
+				margin-top: 15px;
+				display: block;
+				padding: 0 20px;
+				background: #E9EFF6;
+				line-height: 40px;
+				border-width: 0;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			#input_2 {
+				margin-top: 15px;
+				display: block;
+				padding: 0 20px;
+				background: #E9EFF6;
+				line-height: 40px;
+				border-width: 0;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			#input_3 {
+				margin-top: 15px;
+				display: block;
+				padding: 0 20px;
+				background: #E9EFF6;
+				line-height: 40px;
+				border-width: 0;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			#min_button {
+				margin-top: 20px;
+				width: 200px;
+				height: 30px;
+				border-radius: 20px;
+				font-family: 'Roboto', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #E9EFF6;
+				background: #282923;
+				transition: .3s;
+			}
+
+			#min_button:hover{
+				background: #E9EFF6;
+				box-shadow: 0 15px 20px #E9EFF6;
+				color: #282923;
+				transform: translateY(-7px);
+			}
+
+		</style>
+	</head>
+
+	<body bgcolor="#282923" alink="#E7C855" vlink="#E7C855">
+		<div id="task_4">
+			<h1 style="color: white;">4) Завдання</h1>
+			<input id="input_age" type="number" placeholder="Змінити вік">
+			<button id="button_age">Підтвердити</button>
+			
+			<input id="input_name" type="text" placeholder="Змінити ім'я">
+			<button id="button_name">Підтвердити</button>
+
+			<input id="input_sur" type="text" placeholder="Змінити прізвище">
+			<button id="button_sur">Підтвердити</button>
+
+			</br>
+			<button id="button_course">Перевести студента на слідуючий курс</button>
+
+			</br>
+			<button id="info">Показати нинішню інформацію про студента</button>
+		</div>
+
+		<div id="task_5">
+			<h1 style="color: white;">5) Завдання</h1>
+			<input id="input_1" type="number" placeholder="Перше число">
+			<input id="input_2" type="number" placeholder="Друге число">
+			<input id="input_3" type="number" placeholder="Третє число">
+			<button id="min_button">Вивести найменше</button>
+		</div>
+
+		<script type="text/javascript" src="JS/lab_3_(tasks_4-5).js"></script>
+	</body>
+</html>
