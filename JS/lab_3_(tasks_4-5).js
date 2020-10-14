@@ -69,9 +69,9 @@ $('#info').on('click', function ShowInfo() {
 
 $('#min_button').on('click', function Min() {
 	let min;
-	let a = $('#input_1').val();
-	let b = $('#input_2').val();
-	let c = $('#input_3').val();
+	let a = parseInt($('#input_1').val());
+	let b = parseInt($('#input_2').val());
+	let c = parseInt($('#input_3').val());
 
 	if(a < b && a < c)
 	{
